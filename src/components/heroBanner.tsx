@@ -2,12 +2,14 @@ import { heroData } from "@/data/heroData";
 import Button from "./Button";
 import { FolderDot, Github } from "lucide-react";
 import SectionHeading from "./SectionHeading";
+import Reval from "./Reval";
 
 export default function HeroBanner() {
   return (
     <section id="hero" className="w-full min-h-screen bg-color ">
       <div className="max-w-6xl mx-auto px-4 pt-32">
-        <SectionHeading
+        <Reval>
+      <SectionHeading
           as="h1"
           heading={heroData.title}
           highlight={"Front-end"}
@@ -32,6 +34,8 @@ export default function HeroBanner() {
             {heroData.cta[1].label} <Github />
           </Button>
         </div>
+        </Reval>
+  
       </div>
     </section>
   );

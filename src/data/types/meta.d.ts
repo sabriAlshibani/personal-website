@@ -1,6 +1,6 @@
 interface SabriMeta {
     title?:string;
     description?:string;
-    alt?:string;
+    alt:string;
 }
 export default SabriMeta;

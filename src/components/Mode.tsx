@@ -29,7 +29,7 @@ export default function Mode() {
   return (
     <button
       onClick={handleMode}
-      className="text-primary hover:text-hover transition-colors duration-300 w-8 h-8"
+      className="text-white hover:bg-hover flex justify-center items-center rounded-full p-2 bg-secondary transition-colors duration-300 w-8 h-8"
       aria-label="Toggle theme"
     >
       {isLight ? <Moon /> : <Sun />}
