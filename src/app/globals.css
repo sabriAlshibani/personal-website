@@ -80,52 +80,13 @@
   }
 
   body {
-    font-family: var(--font-geist-sans), sans-serif;
-    background-color: var(--bg-color);
+    font-family: var(--font-montserrat), "Montserrat Fallback", sans-serif;
     color: var(--text-color);
     height: 100%;
     transition: background-color 0.3s, color 0.3s;
   }
 }
-@layer utilities {
-  .fade-in-up {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-
-  .fade-in-up.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 
 * {
   scroll-behavior: smooth;
-}
-
-/* Animation delays */
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-/* Scroll-down animation */
-@keyframes scrollDown {
-  0% {
-    transform: translateY(0);
-    opacity: 0.8;
-  }
-  50% {
-    transform: translateY(8px);
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 0.8;
-  }
 }

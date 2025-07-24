@@ -1,16 +1,14 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { sabriMeta } from "@/data/meta";
 import { Metadata } from "next";
+import { sabriMeta } from "@/data/meta";
+import { Montserrat } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Import Montserrat and bind to a CSS variable
+const montserrat = Montserrat({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
@@ -18,16 +16,10 @@ export const metadata: Metadata = {
   description: sabriMeta.description,
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
-      >
+    <html lang="en" className={montserrat.variable}>
+      <body className="font-montserrat antialiased min-h-screen flex flex-col">
         <main className="flex-grow">{children}</main>
       </body>
     </html>
