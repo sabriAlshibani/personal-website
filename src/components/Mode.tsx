@@ -5,7 +5,6 @@ export default function Mode() {
   const [isLight, setIsLight] = useState(false);
 
   useEffect(() => {
-    // Load initial mode from localStorage
     const savedMode = localStorage.getItem("theme");
     const isLightMode = savedMode === "light";
     setIsLight(isLightMode);

@@ -12,7 +12,7 @@ import { Contact } from "./types/contact";
 export const contactData: Contact[] = [
   {
     label: "WhatsApp",
-    href: "https://wa.me/1234567890",
+    href: "https://wa.me/774130655",
     icon: FaWhatsapp,
   },
   {
@@ -27,7 +27,7 @@ export const contactData: Contact[] = [
   },
   {
     label: "Phone",
-    href: "tel:+1234567890",
+    href: "tel:+730",
     icon: FaPhoneAlt,
   },
   {

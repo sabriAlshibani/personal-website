@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { CodeXml, Menu, X } from "lucide-react";
 import Image from "next/image";
@@ -16,6 +16,32 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [sectionActive, setSectionActive] = useState("");
+const logoRef = useRef<HTMLImageElement | null>(null);
+
+useEffect(() => {
+  const updateLogo = () => {
+    const logo = logoRef.current;
+    const isDark = document.body.classList.contains("dark");
+    if (logo) {
+      logo.src = isDark ? "/images/logo-2.png" : "/images/logo.png";
+    }
+  };
+
+  // Run once initially
+  updateLogo();
+
+  // Observe changes to class attribute on <body>
+  const observer = new MutationObserver(updateLogo);
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+
+  // Clean up when component unmounts
+  return () => observer.disconnect();
+}, []);
+
+
 
   useEffect(() => {
     const onScroll = () => handleScroll(setIsScrolled, setSectionActive);
@@ -33,19 +59,20 @@ export default function Navbar() {
     >
       <nav className="flex items-center justify-between h-full max-w-6xl px-4 mx-auto">
         {/* Logo */}
-        <Link
-      href="/"
-      className="flex items-center gap-2 text-primary text-sm md:text-2xl font-bold"
-    >
-      <Image
-        src="/images/logo.png" // use a leading slash for public assets
-        alt="Sabri Logo"
-        width={40}
-        height={40}
-        className="w-10 h-10 object-contain" // ensure sizing is consistent
-      />
-      <span>Sabri Alshibani</span>
-    </Link>
+<Link
+  href="/"
+  className="flex items-center gap-2 text-primary text-sm md:text-2xl font-bold"
+>
+  <img
+    ref={logoRef}
+    src="/images/logo.png"
+    alt="Sabri Logo"
+    width={40}
+    height={40}
+    className="w-10 h-10 object-contain"
+  />
+</Link>
+
 
         {/* Desktop Navigation */}
         <div className="flex items-center space-x-10">
