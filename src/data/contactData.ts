@@ -17,32 +17,32 @@ export const contactData: Contact[] = [
   },
   {
     label: "Facebook",
-    href: "https://facebook.com/yourprofile",
+    href: "https://www.facebook.com/sabri.mohammad.alshibani",
     icon: FaFacebook,
   },
   {
     label: "Instagram",
-    href: "https://instagram.com/yourprofile",
+    href: "https://instagram.com/usa5s",
     icon: FaInstagram,
   },
   {
     label: "Phone",
-    href: "tel:+730",
+    href: "tel:+967730235491",
     icon: FaPhoneAlt,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/yourprofile",
+    href: "https://www.linkedin.com/in/sabri-m-alshibani-46318a287/",
     icon: FaLinkedin,
   },
   {
     label: "GitHub",
-    href: "https://github.com/yourprofile",
+    href: "https://github.com/sabriAlshibani",
     icon: FaGithub,
   },
   {
     label: "Email",
-    href: "mailto:youremail@example.com",
+    href: "mailto:sbryalshybany1@gmail.com",
     icon: FaEnvelope,
   },
 ];

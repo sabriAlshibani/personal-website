@@ -31,6 +31,7 @@ export default function HeroBanner() {
             variant="outline"
             size="md"
             className="flex justify-center items-center gap-2"
+            href={heroData.cta[1].href}
           >
             {heroData.cta[1].label} <Github />
           </Button>

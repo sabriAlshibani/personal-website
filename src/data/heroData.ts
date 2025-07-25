@@ -9,7 +9,7 @@ export const heroData: HeroData = {
       label: "View Projects",
     },
     {
-      href: "#github",
+      href: "https://github.com/sabriAlshibani",
       label: "Visit Github",
     },
   ],

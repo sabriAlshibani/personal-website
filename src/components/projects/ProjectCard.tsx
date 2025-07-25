@@ -35,7 +35,7 @@ export default function ProjectCard({ project }: Props) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-blue-700"
+              className="text-color hover:text-blue-700"
             >
               <FaGithub size={18} />
             </a>
@@ -45,7 +45,7 @@ export default function ProjectCard({ project }: Props) {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-blue-700"
+              className="text-color hover:text-blue-700"
             >
               <FaExternalLinkAlt size={18} />
             </a>
