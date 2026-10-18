@@ -8,6 +8,9 @@ import { Container } from "@/components/container"
 import { Button } from "@/components/ui/button"
 import { ContactDialog } from "@/components/contact-dialog"
 
+import { heroData } from "@/data/hero"
+import { contactData } from "@/data/contact"
+
 export function Hero() {
   return (
     <section id="home" className="relative scroll-mt-24">
@@ -17,7 +20,7 @@ export function Hero() {
           <div className="relative mb-6 flex h-48 w-48 items-center justify-center rounded-full bg-gradient-to-b from-muted/60 to-muted/20 p-2 ring-1 ring-border/80 shadow-md">
             <div className="relative h-full w-full overflow-hidden rounded-full bg-muted/40">
               <Image
-                src="/personal-image.png"
+                src={heroData.image}
                 alt="Developer Portrait"
                 fill
                 className="object-cover object-top grayscale"
@@ -27,15 +30,13 @@ export function Hero() {
           </div>
 
           <span className="text-base sm:text-lg font-medium text-muted-foreground mb-1.5 block">
-            Hello, I&apos;m <span className="font-bold text-foreground">Sabri Alshibani</span>
+            {heroData.greeting} <span className="font-bold text-foreground">{heroData.name}</span>
           </span>
           <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Full-Stack Developer
+            {heroData.role}
           </h1>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-            I build modern web and mobile applications with clean code,
-            scalable architecture, and great user experiences. Passionate
-            about turning ideas into real products.
+            {heroData.description}
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
@@ -44,7 +45,7 @@ export function Hero() {
               size="2xl"
               className="w-full sm:w-auto h-14 px-8 text-base font-semibold rounded-xl gap-2.5 shadow-md hover:shadow-lg transition-all"
             >
-              View My Projects <ArrowRight className="h-5 w-5" />
+              {heroData.ctaText} <ArrowRight className="h-5 w-5" />
             </Button>
             <ContactDialog>
               <Button
@@ -52,7 +53,7 @@ export function Hero() {
                 size="2xl"
                 className="w-full sm:w-auto h-14 px-8 text-base font-semibold rounded-xl border-2 transition-all"
               >
-                Contact Me
+                {heroData.ctaSecondaryText}
               </Button>
             </ContactDialog>
           </div>
@@ -60,7 +61,7 @@ export function Hero() {
           {/* Social Links */}
           <div className="mt-6 flex items-center gap-4 text-muted-foreground">
             <a
-              href="https://github.com"
+              href={contactData.githubUrl}
               target="_blank"
               rel="noreferrer"
               className="transition-colors hover:text-foreground p-1"
@@ -69,7 +70,7 @@ export function Hero() {
               <GithubIcon className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com"
+              href={contactData.linkedinUrl}
               target="_blank"
               rel="noreferrer"
               className="transition-colors hover:text-foreground p-1"
@@ -78,7 +79,7 @@ export function Hero() {
               <LinkedinIcon className="h-5 w-5" />
             </a>
             <a
-              href="mailto:email@example.com"
+              href={`mailto:${contactData.email}`}
               className="transition-colors hover:text-foreground p-1"
               aria-label="Send Email"
             >
@@ -92,15 +93,13 @@ export function Hero() {
           {/* Left Content */}
           <div className="md:col-span-7 lg:col-span-6 flex flex-col items-start text-left">
             <span className="text-base sm:text-lg lg:text-xl font-medium text-muted-foreground tracking-wide mb-2 block">
-              Hello, I&apos;m <span className="font-bold text-foreground">Sabri Alshibani</span>
+              {heroData.greeting} <span className="font-bold text-foreground">{heroData.name}</span>
             </span>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-foreground leading-[1.1]">
-              Full-Stack Developer
+              {heroData.role}
             </h1>
             <p className="mt-5 max-w-xl text-base text-muted-foreground leading-relaxed">
-              I build modern web and mobile applications with clean code,
-              scalable architecture, and great user experiences. Passionate
-              about turning ideas into real products.
+              {heroData.description}
             </p>
 
             {/* Action Buttons */}
@@ -110,7 +109,7 @@ export function Hero() {
                 size="2xl"
                 className="h-14 px-8 text-base lg:text-lg font-semibold rounded-xl gap-3 shadow-md hover:shadow-lg transition-all"
               >
-                View My Projects <ArrowRight className="h-5 w-5" />
+                {heroData.ctaText} <ArrowRight className="h-5 w-5" />
               </Button>
               <ContactDialog>
                 <Button
@@ -118,7 +117,7 @@ export function Hero() {
                   size="2xl"
                   className="h-14 px-8 text-base lg:text-lg font-semibold rounded-xl border-2 transition-all"
                 >
-                  Contact Me
+                  {heroData.ctaSecondaryText}
                 </Button>
               </ContactDialog>
             </div>
@@ -126,7 +125,7 @@ export function Hero() {
             {/* Socials Row */}
             <div className="mt-8 flex items-center gap-4 text-muted-foreground">
               <a
-                href="https://github.com"
+                href={contactData.githubUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-md p-1.5 transition-colors hover:bg-muted hover:text-foreground"
@@ -135,7 +134,7 @@ export function Hero() {
                 <GithubIcon className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href={contactData.linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-md p-1.5 transition-colors hover:bg-muted hover:text-foreground"
@@ -144,7 +143,7 @@ export function Hero() {
                 <LinkedinIcon className="h-5 w-5" />
               </a>
               <a
-                href="mailto:email@example.com"
+                href={`mailto:${contactData.email}`}
                 className="rounded-md p-1.5 transition-colors hover:bg-muted hover:text-foreground"
                 aria-label="Send Email"
               >
@@ -153,19 +152,19 @@ export function Hero() {
             </div>
           </div>
 
-            {/* Right Illustration */}
-            <div className="md:col-span-5 lg:col-span-6 relative flex items-center justify-center lg:justify-end">
-              <div className="relative w-full max-w-[440px] lg:max-w-[500px] xl:max-w-[540px] aspect-square">
-                <Image
-                  src="/personal-image.png"
-                  alt="Developer Illustration"
-                  fill
-                  className="object-contain grayscale select-none pointer-events-none"
-                  priority
-                />
-              </div>
+          {/* Right Illustration */}
+          <div className="md:col-span-5 lg:col-span-6 relative flex items-center justify-center lg:justify-end">
+            <div className="relative w-full max-w-[440px] lg:max-w-[500px] xl:max-w-[540px] aspect-square">
+              <Image
+                src={heroData.image}
+                alt="Developer Illustration"
+                fill
+                className="object-contain grayscale select-none pointer-events-none"
+                priority
+              />
             </div>
           </div>
+        </div>
       </Container>
     </section>
   )

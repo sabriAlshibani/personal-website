@@ -21,45 +21,11 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel"
+import type { Project } from "@/types/project"
+import { projects as defaultProjects } from "@/data/projects"
 
-export interface Project {
-  title: string
-  description: string
-  tags: string[]
-  image: string
-  codeUrl: string
-  demoUrl: string
-}
-
-export const defaultProjects: Project[] = [
-  {
-    title: "TaskFlow",
-    description:
-      "A modern task management app with real-time collaboration and team features.",
-    tags: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
-    image: "/project-taskflow.jpeg",
-    codeUrl: "https://github.com",
-    demoUrl: "https://example.com",
-  },
-  {
-    title: "TravelMate",
-    description:
-      "A mobile app for discovering and exploring amazing destinations around the world.",
-    tags: ["React Native", "Expo", "Supabase", "TypeScript"],
-    image: "/project-travelmate.jpeg",
-    codeUrl: "https://github.com",
-    demoUrl: "https://example.com",
-  },
-  {
-    title: "FinanceTrack",
-    description:
-      "A web application for personal finance management with detailed analytics and reports.",
-    tags: ["Next.js", "Prisma", "PostgreSQL", "Tailwind CSS"],
-    image: "/project-financetrack.jpeg",
-    codeUrl: "https://github.com",
-    demoUrl: "https://example.com",
-  },
-]
+export type { Project }
+export { defaultProjects }
 
 interface ProjectsProps {
   projects?: Project[]

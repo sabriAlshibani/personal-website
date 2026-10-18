@@ -7,13 +7,7 @@ import { ArrowUp } from "lucide-react"
 import { Container } from "@/components/container"
 import { Button } from "@/components/ui/button"
 
-const footerLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#technologies", label: "Technologies" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-]
+import { navLinks as footerLinks } from "@/data/navigation"
 
 export function Footer() {
   const scrollToTop = () => {

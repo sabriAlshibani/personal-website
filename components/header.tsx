@@ -16,13 +16,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#technologies", label: "Technologies" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-];
+import { navLinks } from "@/data/navigation"
 
 export default function Header() {
   const [open, setOpen] = React.useState(false);
@@ -37,7 +31,7 @@ export default function Header() {
             alt="Website Logo"
             width={110}
             height={36}
-            className="dark:hidden object-contain"
+            className="h-7 w-auto sm:h-9 dark:hidden object-contain"
             priority
           />
           <Image
@@ -45,7 +39,7 @@ export default function Header() {
             alt="Website Logo"
             width={110}
             height={36}
-            className="hidden dark:block object-contain"
+            className="hidden dark:block h-7 w-auto sm:h-9 object-contain"
             priority
           />
         </Link>

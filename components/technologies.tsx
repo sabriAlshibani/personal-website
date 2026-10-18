@@ -9,7 +9,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { techStack } from "@/components/tech-stack-icons"
+import { techStack } from "@/data/technologies"
 import { cn } from "@/lib/utils"
 
 export function Technologies() {
