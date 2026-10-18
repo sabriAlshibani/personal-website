@@ -14,7 +14,7 @@ export function Hero() {
       <Container>
         {/* Mobile Avatar View */}
         <div className="flex flex-col items-center text-center md:hidden mb-8">
-          <div className="relative mb-6 flex h-44 w-44 items-center justify-center rounded-full bg-gradient-to-b from-muted/60 to-muted/20 p-2 ring-1 ring-border/80 shadow-md">
+          <div className="relative mb-6 flex h-48 w-48 items-center justify-center rounded-full bg-gradient-to-b from-muted/60 to-muted/20 p-2 ring-1 ring-border/80 shadow-md">
             <div className="relative h-full w-full overflow-hidden rounded-full bg-muted/40">
               <Image
                 src="/personal-image.png"
